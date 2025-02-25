@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "class-schedule"
+version = "0.1.0"
+description = "课程表应用"
+authors = ["Your Name <your.email@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8.12"
+Flask = "2.0.3"
+gunicorn = "20.1.0"
+Werkzeug = "2.0.3"
+Jinja2 = "3.0.3"
+MarkupSafe = "2.0.1"
+click = "8.0.4"
+itsdangerous = "2.0.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api" 

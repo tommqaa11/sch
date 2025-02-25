@@ -1,14 +1,15 @@
 [build]
   command = """
-    python -m pip install --upgrade pip &&
-    pip install -r requirements.txt
+    curl -sSL https://install.python-poetry.org | python3 - &&
+    poetry config virtualenvs.create false &&
+    poetry install --no-dev
   """
   publish = "."
   functions = "netlify/functions"
 
 [build.environment]
-  PYTHON_VERSION = "3.8"
-  PIPENV_IGNORE_VIRTUALENVS = "1"
+  PYTHON_VERSION = "3.8.12"
+  POETRY_VERSION = "1.7.1"
 
 [[redirects]]
   from = "/*"
